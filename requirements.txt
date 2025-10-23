@@ -1,0 +1,9 @@
+confluent-kafka
+requests==2.31.0
+python-dotenv
+psycopg
+pytz
+tzdata
+psycopg-binary
+filelock
+numpy
