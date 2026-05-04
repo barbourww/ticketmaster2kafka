@@ -16,7 +16,7 @@ class KafkaConfluentHelper:
         self.conf = {
             'bootstrap.servers': config['KAFKA_BOOTSTRAP'],
             'security.protocol': 'SASL_SSL',
-            'ssl.ca.location': 'strimzi-ca.crt',
+            'ssl.ca.location': config.get('KAFKA_CA_LOCATION', '/etc/viewlive/certs/strimzi-ca.crt'),
             'sasl.mechanism': 'SCRAM-SHA-512',
             'sasl.username': config['KAFKA_USER'],
             'sasl.password': config['KAFKA_PASSWORD'],

@@ -383,6 +383,7 @@ if __name__ == "__main__":
         'KAFKA_BOOTSTRAP': os.environ.get('KAFKA_BOOTSTRAP'),
         'KAFKA_USER':  os.environ.get('KAFKA_USER'),
         'KAFKA_PASSWORD': os.environ.get('KAFKA_PASSWORD'),
+        'KAFKA_CA_LOCATION': os.environ.get('KAFKA_CA_LOCATION', '/etc/viewlive/certs/strimzi-ca.crt'),
     }
 
     log_path = str(os.environ.get('LOG_PATH')) if os.environ.get('LOG_PATH') else "."
